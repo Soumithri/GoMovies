@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Doc ID</td>
+            <td>Movie Name></td>
+            <td>Summary</td>
+			<td>TF IDF Score</td>
+            <td>Sentiment Score</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["dId"]}}</td>
+               <td>{{row["title"]}}</td>
+               <td> {{ row["summary"]}}</td>
+			   <td>{{ row["tfidf_score"]}}</td>
+               <td>{{row["sentiment_score"]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
